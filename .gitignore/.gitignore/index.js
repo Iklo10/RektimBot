@@ -48,9 +48,7 @@ bot.on('message' , message => {
             .addField("- /gaetan", `${aide_2}`)
             .addField("- /69", `${aide_2}`)
             .addField("- /saucisse", `${aide_2}`)
-
         message.channel.send({embed: aide_1});
-
     }
 
     if (message.content === prefix + "saucisse"){
