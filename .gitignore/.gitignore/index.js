@@ -31,7 +31,7 @@ bot.on('message' , message => {
     }      
 
     if (message.content === prefix + "version"){
-        message.channel.sendMessage(" *Bip Bop* \n Voici mes détails \n -numéro de version: 1.1.2 \n Pour voir tout les ajouts vas voir sur le site (lien du site grâce à la commande /site) *Bip Bop*"); // voir pour ajouter autre chose
+        message.channel.sendMessage(" *Bip Bop* \n Voici mes détails \n -numéro de version: 1.1.3 \n Pour voir tout les ajouts vas voir sur le site (lien du site grâce à la commande /site) *Bip Bop*"); // voir pour ajouter autre chose
     }
 
     if (message.content === prefix + "site"){
@@ -121,7 +121,7 @@ bot.on('message' , message => {
 
     if (message.content === prefix + "kermit"){
         for (var iter = 0; iter < 10; iter++)
-        message.channel.sendMessage("@KermitOfficiel#0591 THE BEST MAN CAN GET !!!!!");
+        message.channel.sendMessage("382559879447052289 THE BEST MAN CAN GET !!!!!");
     }
     
 });
