@@ -31,7 +31,7 @@ bot.on('message' , message => {
     }      
 
     if (message.content === prefix + "version"){
-        message.channel.sendMessage(" *Bip Bop* \n Voici mes détails \n -numéro de version 1.0 \n Pour voir tout les ajouts vas voir sur le site (lien du site grâce à la commande /site) *Bip Bop*"); // voir pour ajouter autre chose
+        message.channel.sendMessage(" *Bip Bop* \n Voici mes détails \n -numéro de version: 1.1.0 \n Pour voir tout les ajouts vas voir sur le site (lien du site grâce à la commande /site) *Bip Bop*"); // voir pour ajouter autre chose
     }
 
     if (message.content === prefix + "site"){
