@@ -61,6 +61,7 @@ bot.on('message' , message => {
 
     if (message.content === prefix + "help2"){
         var aide_2_1 = ("essaie la et tu verra ! :wink: ")
+        var aide_2_3 = ("un hommage au meilleur homme")
         
         var aide_2_2 = new Discord.RichEmbed()
             .setTitle("Liste des commandes secondaires")
@@ -75,7 +76,7 @@ bot.on('message' , message => {
             .addField("- /zorana", `${aide_2_1}`)
             .addField("- /rasoir", `${aide_2_1}`)
             .addField("- /tatayoyo", `${aide_2_1}`)
-            .addField("- /kermit", `${aide_2_1}`)
+            .addField("- /berson", `${aide_2_3}`)
         message.channel.send({embed: aide_2_2});
     }
 
@@ -118,10 +119,9 @@ bot.on('message' , message => {
         for (var iter = 0; iter < 10; iter++)
         message.channel.sendMessage("@everyone TATAAAAAAAA YOYOOOOO");
     }
-
-    if (message.content === prefix + "kermit"){
-        for (var iter = 0; iter < 10; iter++)
-        message.channel.sendMessage("382559879447052289 THE BEST MAN CAN GET !!!!!");
+    
+    if (message.content === prefix + "berson"){
+        message.channel.sendMessage("Pascal BERSON... Le meillleur homme que le monde ait pu avoir.");
     }
     
 });
