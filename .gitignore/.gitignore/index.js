@@ -120,7 +120,7 @@ bot.on('message' , message => {
     }
 
     if (message.content === prefix + "kermit"){
-        for (var iter = 0; iter < 20; iter++)
+        for (var iter = 0; iter < 10; iter++)
         message.channel.sendMessage("@KermitOfficiel THE BEST MAN CAN GET !!!!!");
     }
     
