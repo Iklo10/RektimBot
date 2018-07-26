@@ -109,7 +109,7 @@ bot.on('message' , message => {
     }
    
     if (message.content === prefix + "rasoir"){
-        message.channel.sendMessage("GILLETTE !!!! THE BEST MAN CAN GET!!! :microphone: :musical_score: :microphone: :musical_score: https://www.youtube.com/watch?v=9fWxCIi5PIw");
+        message.channel.sendMessage("GILLETTE !!!! THE BEST MAN CAN GET!!! :microphone: :musical_score: :microphone: :musical_score: \n https://www.youtube.com/watch?v=9fWxCIi5PIw");
     }
 
     if (message.content === prefix + "tatayoyo"){
