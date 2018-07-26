@@ -49,11 +49,13 @@ bot.on('message' , message => {
     if (message.content === prefix + "futur"){
         var futur_1 = ("un peu comme à la mee6 quoi")
         var futur_2 = ("des commandes toujours plus folles et débilles")
+        var futur_3 = ("un peu à la rythm maison")
         var futur_fin = ("pour le futur et le bien être du serveur !")         
             var futur = new Discord.RichEmbed()
                 .setTitle("Liste des futur ajouts au bot !")
                 .setColor(`#DB1C1C`)
                 .addField("- un système d\'XP et de level", `${futur_1}`)
+                .addField("- un système musical", `${futur_3}`)
                 .addField("- de nouvelles commandes", `${futur_2}`)
                 .addField("N'hésitez pas à donner des idées pour le bot !", `${futur_fin}`)
             message.channel.send({embed: futur});
@@ -61,7 +63,6 @@ bot.on('message' , message => {
 
     if (message.content === prefix + "help2"){
         var aide_2_1 = ("essaie la et tu verra ! :wink: ")
-        var aide_2_3 = ("un hommage au meilleur homme")
         
         var aide_2_2 = new Discord.RichEmbed()
             .setTitle("Liste des commandes secondaires")
@@ -76,7 +77,6 @@ bot.on('message' , message => {
             .addField("- /zorana", `${aide_2_1}`)
             .addField("- /rasoir", `${aide_2_1}`)
             .addField("- /tatayoyo", `${aide_2_1}`)
-            .addField("- /berson", `${aide_2_3}`)
         message.channel.send({embed: aide_2_2});
     }
 
@@ -95,18 +95,15 @@ bot.on('message' , message => {
     if (message.content === prefix + "love"){
         message.channel.sendMessage("WHAT IS LOVE !? Tel est la question ! https://www.youtube.com/watch?v=dAIpjgvhKsA ");
     }
-
     
     if (message.content === prefix + "D"){
         message.channel.sendMessage("D, la réponse D");
     }
-    
-    
+        
     if (message.content === prefix + "bafouille"){
         message.channel.sendMessage("C'est votre ultime bafouille Gui ?");
     }
-    
-    
+     
     if (message.content === prefix + "zorana"){
         message.channel.sendMessage("BONJOUR! Je suis le pésident à ZORANA! \nSi je suis là, c\'est parce qu'est en SPÉCIAL! ELLE A DES BUBULLES !! ");
     }
@@ -118,10 +115,6 @@ bot.on('message' , message => {
     if (message.content === prefix + "tatayoyo"){
         for (var iter = 0; iter < 10; iter++)
         message.channel.sendMessage("@everyone TATAAAAAAAA YOYOOOOO");
-    }
-    
-    if (message.content === prefix + "berson"){
-        message.channel.sendMessage("Pascal BERSON... Le meillleur homme que le monde ait pu avoir.");
     }
     
 });
