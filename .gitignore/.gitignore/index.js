@@ -21,7 +21,7 @@ bot.login(process.env.TOKEN);
 bot.on('message' , message => {
     
     if (message.content === prefix + "help"){
-    var aide_1_1 = ("Pour voir à quelle version je suis !") 
+    var aide_1_1 = ("Pour voir ma version et mes ajouts !") 
     var aide_1_2 = ("Pour obtenir ton ping") 
     var aide_1_3 = ("Pour voir si le bot marche bien et qu\'il est pas tout casser")
     var aide_1_4 = ("Pour voir les règles du système d'XP")
@@ -38,38 +38,47 @@ bot.on('message' , message => {
             .addField("- /xp", `${aide_1_5}`)
             .addField("- /futur", `${aide_1_6}`)
         message.channel.send({embed: aide_1});
+        console.log("help effectué")
     }      
 
     if (message.content === prefix + "version"){
-        var version1_1 = ("**Version 2.0**") 
+        var version1_1 = ("**Version 2.5**") 
         var version1_2 = ("Le système d'XP est enfin là !! *vas vite fait voir les règles quand même en tapant /rxp* \n Des améliorations arrivent du système bientôt !*pour plus d'information ==> /futur* ")
-            
+        var version1_3 = ("- Ajout de la commande /wankul qui permet de faire passer aléatoirement 15 (plus peut etre bientôt) wankil (pour l'instant crée par mMthis et Géatan) \n - Petit changement esthétique du coté de la commande */help2*")
+
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
                 .setColor(`#DB1C1C`)
                 .addField("Version ZululBot", `${version1_1}`)
                 .addField("Ajouts V2.0", `${version1_2}`)
+                .addField("Ajouts V2.5", `${version1_3}`)
             message.channel.send({embed: version1});
+            console.log("help effectué")
     }
   
     if (message.content === prefix + "test"){
-        message.channel.sendMessage("Test chat validé");
+        message.channel.send("Test chat validé");
+        console.log("Test effectué")
     }
 
     if (message.content === prefix + "ping"){
         message.reply("PONG !! Latence actuelle: " + `${message.createdTimestamp - Date.now()}` + " ms");
+        console.log("ping effectué")
     }
     
     if (message.content === prefix + "rxp"){
         var rxp1 = ("Il suffit d'écrire un message pour obtenir 1 point") 
         var rxp2 = ("Tous message considéré comme du spam ou spam sera reconnu comme triche ou anti-jeu et sera puni allant d'un rappel à un mute temporaire, un ban temporaire ou même d'une remise à zéro de son compteur d'XP!")
-            
+        var rxp3 = ("Les conteurs sont remis à zéro à version déployer !")
+        
             var rxp0 = new Discord.RichEmbed()
                 .setTitle("Règle du système d'XP")
                 .setColor(`#DB1C1C`)
                 .addField("Gagner de l'xp c'est facile ! ", `${rxp1}`)
                 .addField("MAIS ATTENTION ! IL Y A UNE REGLE !", `${rxp2}`)
+                .addField("Petite dernière chose:", `${rxp3}`)
             message.channel.send({embed: rxp0});
+            console.log("help effectué")
     }
      
     if (message.content === prefix + "futur"){
@@ -86,61 +95,64 @@ bot.on('message' , message => {
                 .addField("Mise à jour ZulutBot V5.0 :", `${zbv5}`)
                 .addField("N'hésitez pas à donner des idées pour le bot !", `${futur_fin}`)
             message.channel.send({embed: futur});
+        console.log("futur effectué")
     }
 
     if (message.content === prefix + "help2"){
-        var aide_2_1 = ("essaie la et tu verra ! :wink: ")
+        var aide_2_1 = ("- /saucisse \n - /love \n - /gaetan \n - /69 \n - /repd \n - /bafouille \n - /zorana \n - /rasoir \n - /tatayoyo \n - /wankul \n **De futur commandes du genre arriveront plus tard**")
                 
         var aide_2_2 = new Discord.RichEmbed()
             .setTitle("Liste des commandes secondaires")
             .setColor(`#DB1C1C`)
-            .addField("- /saucisse", `${aide_2_1}`)
-            .addField("- /love", `${aide_2_1}`)
-            .addField("- /gaetan", `${aide_2_1}`)
-            .addField("- /69", `${aide_2_1}`)
-            .addField("- /repd", `${aide_2_1}`)
-            .addField("- /bafouille", `${aide_2_1}`)
-            .addField("- /zorana", `${aide_2_1}`)
-            .addField("- /rasoir", `${aide_2_1}`)
-            .addField("- /tatayoyo", `${aide_2_1}`)
+            .addField("Voici la liste des commande secondaire ! Testent les et tu verras bien que ça donnera :wink:", `${aide_2_1}`)
         message.channel.send({embed: aide_2_2});
+        console.log("help2 effectué")
     }
 
     if (message.content === prefix + "saucisse"){
         message.channel.send("OPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !! \nOPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !! \nOPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !! \nOPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !!");
+        console.log("saucisse effectué")
     }
 
     if (message.content === prefix + "69"){
         message.channel.send("OPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\nOPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\nOPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\nOPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\n" );
+        console.log("69 effectué")
     }
 
     if (message.content === prefix + "gaetan"){
-        message.channel.sendMessage("Gaétan dans environ 5-6 ans ==> https://www.youtube.com/watch?v=KZb3GUOWX8I");
+        message.channel.send("Gaétan dans environ 5-6 ans ==> https://www.youtube.com/watch?v=KZb3GUOWX8I");
+        console.log("gaetan effectué")
     }
 
     if (message.content === prefix + "love"){
-        message.channel.sendMessage("WHAT IS LOVE !? Tel est la question ! https://www.youtube.com/watch?v=dAIpjgvhKsA ");
+        message.channel.send("WHAT IS LOVE !? Tel est la question ! https://www.youtube.com/watch?v=dAIpjgvhKsA ");
+        console.log("WiL effectué")
     }
     
     if (message.content === prefix + "repd"){
-        message.channel.sendMessage("D, la réponse D");
+        message.channel.send("D, la réponse D");
+        console.log("D effectué")
     }
         
     if (message.content === prefix + "bafouille"){
-        message.channel.sendMessage("C'est votre ultime bafouille Gui ?");
+        message.channel.send("C'est votre ultime bafouille Gui ?");
+        console.log("bafouille effectué")
     }
         
     if (message.content === prefix + "zorana"){
-        message.channel.sendMessage("BONJOUR! Je suis le pésident à ZORANA! \nSi je suis là, c\'est parce qu'est en SPÉCIAL! ELLE A DES BUBULLES !! ");
+        message.channel.send("BONJOUR! Je suis le pésident à ZORANA! \nSi je suis là, c\'est parce qu'est en SPÉCIAL! ELLE A DES BUBULLES !! ");
+        console.log("eau effectué")
     }
 
     if (message.content === prefix + "rasoir"){
-        message.channel.sendMessage("GILLETTE !!!! THE BEST MAN CAN GET!!! :microphone: :musical_score: :microphone: :musical_score: https://www.youtube.com/watch?v=9fWxCIi5PIw");
+        message.channel.send("GILLETTE !!!! THE BEST MAN CAN GET!!! :microphone: :musical_score: :microphone: :musical_score: https://www.youtube.com/watch?v=9fWxCIi5PIw");
+        console.log("rasoir effectué")
     }
 
     if (message.content === prefix + "tatayoyo"){
         for (var boucle = 0; boucle < 10; boucle++)
-        message.channel.sendMessage("@everyone TATAAAAAAAA YOYOOOOO");
+        message.channel.send("@everyone TATAAAAAAAA YOYOOOOO");
+        console.log("tata yoyo")
     }
 
     var perso = message.author.username;
@@ -162,7 +174,15 @@ bot.on('message' , message => {
         var xp_embed = new Discord.RichEmbed()
             .setTitle(`Stat des XP de ${message.author.username}`)
             .setColor(`#F4D03F`)
+            .addField("Niveau")
             .addField("XP total:", `${xpfinal[1]} points d'expériences`)
         message.channel.send({embed: xp_embed});
-    }} 
+        console.log("commande xp effectue")
+    }}
+
+    if (message.content === prefix + "wankul"){
+        number = 15;
+        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;7
+        message.channel.send({files:["./wankul/" + imageNumber + ".png"]})
+    }
 });
