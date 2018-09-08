@@ -162,8 +162,7 @@ bot.on('message' , message => {
         var xp_embed = new Discord.RichEmbed()
             .setTitle(`Stat des XP de ${message.author.username}`)
             .setColor(`#F4D03F`)
-            .addField("Niveau")
-            .addField("XP total:", `${xpfinal[1]} points d'expériences`)
+            .addField("XP total:", `${xpfinal[1]}`)
         message.channel.send({embed: xp_embed});
     }}
 
