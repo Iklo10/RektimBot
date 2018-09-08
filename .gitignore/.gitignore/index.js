@@ -54,7 +54,7 @@ bot.on('message' , message => {
                 .addField("Ajouts V2.0", `${version1_2}`)
                 .addField("Ajouts V2.5", `${version1_3}`)
                 .addField("Ajouts V2.6", `${version1_4}`)
-                .addField("Ajouts V2.7", `${version1_5)`)
+                .addField("Ajouts V2.7", `${version1_5}`)
             message.channel.send({embed: version1});
     }
   
