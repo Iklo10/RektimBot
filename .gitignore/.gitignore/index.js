@@ -38,7 +38,6 @@ bot.on('message' , message => {
             .addField("- /xp", `${aide_1_5}`)
             .addField("- /futur", `${aide_1_6}`)
         message.channel.send({embed: aide_1});
-        console.log("help effectué")
     }      
 
     if (message.content === prefix + "version"){
@@ -53,17 +52,14 @@ bot.on('message' , message => {
                 .addField("Ajouts V2.0", `${version1_2}`)
                 .addField("Ajouts V2.5", `${version1_3}`)
             message.channel.send({embed: version1});
-            console.log("help effectué")
     }
   
     if (message.content === prefix + "test"){
         message.channel.send("Test chat validé");
-        console.log("Test effectué")
     }
 
     if (message.content === prefix + "ping"){
         message.reply("PONG !! Latence actuelle: " + `${message.createdTimestamp - Date.now()}` + " ms");
-        console.log("ping effectué")
     }
     
     if (message.content === prefix + "rxp"){
@@ -78,7 +74,6 @@ bot.on('message' , message => {
                 .addField("MAIS ATTENTION ! IL Y A UNE REGLE !", `${rxp2}`)
                 .addField("Petite dernière chose:", `${rxp3}`)
             message.channel.send({embed: rxp0});
-            console.log("help effectué")
     }
      
     if (message.content === prefix + "futur"){
@@ -95,7 +90,6 @@ bot.on('message' , message => {
                 .addField("Mise à jour ZulutBot V5.0 :", `${zbv5}`)
                 .addField("N'hésitez pas à donner des idées pour le bot !", `${futur_fin}`)
             message.channel.send({embed: futur});
-        console.log("futur effectué")
     }
 
     if (message.content === prefix + "help2"){
@@ -106,53 +100,43 @@ bot.on('message' , message => {
             .setColor(`#DB1C1C`)
             .addField("Voici la liste des commande secondaire ! Testent les et tu verras bien que ça donnera :wink:", `${aide_2_1}`)
         message.channel.send({embed: aide_2_2});
-        console.log("help2 effectué")
     }
 
     if (message.content === prefix + "saucisse"){
         message.channel.send("OPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !! \nOPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !! \nOPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !! \nOPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !!");
-        console.log("saucisse effectué")
     }
 
     if (message.content === prefix + "69"){
         message.channel.send("OPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\nOPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\nOPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\nOPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\n" );
-        console.log("69 effectué")
     }
 
     if (message.content === prefix + "gaetan"){
         message.channel.send("Gaétan dans environ 5-6 ans ==> https://www.youtube.com/watch?v=KZb3GUOWX8I");
-        console.log("gaetan effectué")
     }
 
     if (message.content === prefix + "love"){
         message.channel.send("WHAT IS LOVE !? Tel est la question ! https://www.youtube.com/watch?v=dAIpjgvhKsA ");
-        console.log("WiL effectué")
     }
     
     if (message.content === prefix + "repd"){
         message.channel.send("D, la réponse D");
-        console.log("D effectué")
     }
         
     if (message.content === prefix + "bafouille"){
         message.channel.send("C'est votre ultime bafouille Gui ?");
-        console.log("bafouille effectué")
     }
         
     if (message.content === prefix + "zorana"){
         message.channel.send("BONJOUR! Je suis le pésident à ZORANA! \nSi je suis là, c\'est parce qu'est en SPÉCIAL! ELLE A DES BUBULLES !! ");
-        console.log("eau effectué")
     }
 
     if (message.content === prefix + "rasoir"){
         message.channel.send("GILLETTE !!!! THE BEST MAN CAN GET!!! :microphone: :musical_score: :microphone: :musical_score: https://www.youtube.com/watch?v=9fWxCIi5PIw");
-        console.log("rasoir effectué")
     }
 
     if (message.content === prefix + "tatayoyo"){
         for (var boucle = 0; boucle < 10; boucle++)
         message.channel.send("@everyone TATAAAAAAAA YOYOOOOO");
-        console.log("tata yoyo")
     }
 
     var perso = message.author.username;
@@ -177,12 +161,28 @@ bot.on('message' , message => {
             .addField("Niveau")
             .addField("XP total:", `${xpfinal[1]} points d'expériences`)
         message.channel.send({embed: xp_embed});
-        console.log("commande xp effectue")
     }}
 
-    if (message.content === prefix + "wankul"){
+if (message.content === prefix + "wankul"){
         number = 15;
-        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;7
-        message.channel.send({files:["./wankul/" + imageNumber + ".png"]})
+        var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        switch (random) {
+            case 1: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252130-44eef000-b352-11e8-98c4-caf5ac41bf63.png']}); break;
+            case 2: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252131-44eef000-b352-11e8-822d-d52f7d050b6d.png']}); break;
+            case 3: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252132-44eef000-b352-11e8-9b37-d38c3194606b.png']}); break;
+            case 4: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252133-45878680-b352-11e8-92ff-98eaf177030a.png']}); break;
+            case 5: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252134-45878680-b352-11e8-9053-3dc61afa4d5a.png']}); break;
+            case 6: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252135-45878680-b352-11e8-9535-e530377ea9c3.png']}); break;
+            case 7: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252136-46201d00-b352-11e8-8b89-de33d2d45a6a.png']}); break;
+            case 8: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252137-46201d00-b352-11e8-948c-ae2ba8360325.png']}); break;
+            case 9: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252140-46201d00-b352-11e8-8b31-f2c406530f68.png']}); break;
+            case 10: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252141-46b8b380-b352-11e8-8281-49a93f19febd.png']}); break;
+            case 11: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252142-46b8b380-b352-11e8-88ba-820be872817f.png']}); break;
+            case 12: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252143-46b8b380-b352-11e8-85a0-28c48d49a9c1.png']}); break;
+            case 13: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252144-47514a00-b352-11e8-9e5b-e799275f5498.png']}); break;
+            case 14: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252146-47514a00-b352-11e8-9d07-1140e49896f5.png']}); break;
+            case 15: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252147-47514a00-b352-11e8-8b54-1bcad5b1eaa4.png']}); break;
+        }
     }
+    
 });
