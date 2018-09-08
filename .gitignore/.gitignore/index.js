@@ -41,16 +41,18 @@ bot.on('message' , message => {
     }      
 
     if (message.content === prefix + "version"){
-        var version1_1 = ("**Version 2.5.1**") 
+        var version1_1 = ("**Version 2.6**") 
         var version1_2 = ("Le système d'XP est enfin là !! *vas vite fait voir les règles quand même en tapant /rxp* \n Des améliorations arrivent du système bientôt !*pour plus d'information ==> /futur* ")
         var version1_3 = ("- Ajout de la commande /wankul qui permet de faire passer aléatoirement 15 (plus peut etre bientôt) wankil (pour l'instant crée par mMthis et Géatan) \n - Petit changement esthétique du coté de la commande */help2*")
-
+        var version1_4 = ("- Ajout de 6 wankuls !)
+        
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
                 .setColor(`#DB1C1C`)
                 .addField("Version ZululBot", `${version1_1}`)
                 .addField("Ajouts V2.0", `${version1_2}`)
                 .addField("Ajouts V2.5", `${version1_3}`)
+                .addField("Ajouts V2.6", `${version1_4}`)
             message.channel.send({embed: version1});
     }
   
