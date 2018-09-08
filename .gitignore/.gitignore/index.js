@@ -45,6 +45,7 @@ bot.on('message' , message => {
         var version1_2 = ("Le système d'XP est enfin là !! *vas vite fait voir les règles quand même en tapant /rxp* \n Des améliorations arrivent du système bientôt !*pour plus d'information ==> /futur* ")
         var version1_3 = ("- Ajout de la commande /wankul qui permet de faire passer aléatoirement 15 (plus peut etre bientôt) wankil (pour l'instant crée par mMthis et Géatan) \n - Petit changement esthétique du coté de la commande */help2*")
         var version1_4 = ("- Ajout de 6 wankuls !")
+        var version1_5 = ("- Ajout de 6 wankuls !")
         
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
@@ -53,6 +54,7 @@ bot.on('message' , message => {
                 .addField("Ajouts V2.0", `${version1_2}`)
                 .addField("Ajouts V2.5", `${version1_3}`)
                 .addField("Ajouts V2.6", `${version1_4}`)
+                .addField("Ajouts V2.7", `${version1_5)`)
             message.channel.send({embed: version1});
     }
   
@@ -166,7 +168,7 @@ bot.on('message' , message => {
     }}
 
 if (message.content === prefix + "wankul"){
-        number = 15;
+        number = 27;
         var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         switch (random) {
             case 1: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252130-44eef000-b352-11e8-98c4-caf5ac41bf63.png']}); break;
@@ -190,6 +192,12 @@ if (message.content === prefix + "wankul"){
             case 19: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252385-9351be00-b355-11e8-917d-1c8e64ccabc5.png']}); break;
             case 20: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252386-9351be00-b355-11e8-810f-40ccaafdf894.png']}); break;
             case 21: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252387-9351be00-b355-11e8-8f4c-b13043dc592d.png']}); break;
+            case 22: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257512-98d7f400-b3a7-11e8-9af3-beb55de6ea1e.png']}); break;
+            case 23: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257513-99708a80-b3a7-11e8-9ae9-ea9778c42097.png']}); break;         
+            case 24: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257514-99708a80-b3a7-11e8-9d84-741a0e928d17.png']}); break;
+            case 25: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257509-98d7f400-b3a7-11e8-8785-af7e403ab933.png']}); break;
+            case 26: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257510-98d7f400-b3a7-11e8-89cc-a713c3181a77.png']}); break;
+            case 27: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257511-98d7f400-b3a7-11e8-88fc-1044f45221b2.png']}); break;
         }
     }
     
