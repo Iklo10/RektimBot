@@ -41,11 +41,12 @@ bot.on('message' , message => {
     }      
 
     if (message.content === prefix + "version"){
-        var version1_1 = ("**Version 2.7**") 
+        var version1_1 = ("**Version 2.10**") 
         var version1_2 = ("Le système d'XP est enfin là !! *vas vite fait voir les règles quand même en tapant /rxp* \n Des améliorations arrivent du système bientôt !*pour plus d'information ==> /futur* ")
-        var version1_3 = ("- Ajout de la commande /wankul qui permet de faire passer aléatoirement 15 (plus peut etre bientôt) wankil (pour l'instant crée par mMthis et Géatan) \n - Petit changement esthétique du coté de la commande */help2*")
+        var version1_3 = ("- Ajout de la commande /wankul qui permet de faire passer aléatoirement un ceratin nombre de wankul (créés par Mathis et Gaétan) \n - Petit changement esthétique du coté de la commande */help2*")
         var version1_4 = ("- Ajout de 6 wankuls !")
         var version1_5 = ("- Ajout de 6 wankuls !")
+        var version1_6 = ("- Ajout de 2 nouveaux wankuls \n - Nouveau logo de serv et de bot")
         
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
@@ -55,6 +56,7 @@ bot.on('message' , message => {
                 .addField("Ajouts V2.5", `${version1_3}`)
                 .addField("Ajouts V2.6", `${version1_4}`)
                 .addField("Ajouts V2.7", `${version1_5}`)
+                .addField("Ajouts V2.10", `${version1_6}`)
             message.channel.send({embed: version1});
     }
   
@@ -167,7 +169,7 @@ bot.on('message' , message => {
     }}
 
 if (message.content === prefix + "wankul"){
-        number = 27;
+        number = 29;
         var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         switch (random) {
             case 1: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252130-44eef000-b352-11e8-98c4-caf5ac41bf63.png']}); break;
@@ -184,7 +186,7 @@ if (message.content === prefix + "wankul"){
             case 12: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252143-46b8b380-b352-11e8-85a0-28c48d49a9c1.png']}); break;
             case 13: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252144-47514a00-b352-11e8-9e5b-e799275f5498.png']}); break;
             case 14: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252146-47514a00-b352-11e8-9d07-1140e49896f5.png']}); break;
-            case 15: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252147-47514a00-b352-11e8-8b54-1bcad5b1eaa4.png']}); break;
+            case 15: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45265074-6d581680-b446-11e8-8502-02002d6cf353.png']}); break;
             case 16: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252382-92b92780-b355-11e8-83ad-bef815eb11f5.png']}); break;
             case 17: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252383-9351be00-b355-11e8-9c09-a1249daab68f.png']}); break;
             case 18: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252384-9351be00-b355-11e8-8b19-d2ffc821e3dd.png']}); break;
@@ -197,6 +199,8 @@ if (message.content === prefix + "wankul"){
             case 25: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257509-98d7f400-b3a7-11e8-8785-af7e403ab933.png']}); break;
             case 26: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257510-98d7f400-b3a7-11e8-89cc-a713c3181a77.png']}); break;
             case 27: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257511-98d7f400-b3a7-11e8-88fc-1044f45221b2.png']}); break;
+            case 28: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45265093-ab553a80-b446-11e8-9408-e037797de2b2.png']}); break;
+            case 29: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45265094-ab553a80-b446-11e8-970a-dd143c2cf9b4.png']}); break;                
         }
     }
     
