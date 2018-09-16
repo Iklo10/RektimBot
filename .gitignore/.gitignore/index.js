@@ -41,12 +41,13 @@ bot.on('message' , message => {
     }      
 
     if (message.content === prefix + "version"){
-        var version1_1 = ("**Version 2.10**") 
+        var version1_1 = ("**Version 2.15**") 
         var version1_2 = ("Le système d'XP est enfin là !! *vas vite fait voir les règles quand même en tapant /rxp* \n Des améliorations arrivent du système bientôt !*pour plus d'information ==> /futur* ")
         var version1_3 = ("- Ajout de la commande /wankul qui permet de faire passer aléatoirement un ceratin nombre de wankul (créés par Mathis et Gaétan) \n - Petit changement esthétique du coté de la commande */help2*")
         var version1_4 = ("- Ajout de 6 wankuls !")
         var version1_5 = ("- Ajout de 6 wankuls !")
         var version1_6 = ("- Ajout de 2 nouveaux wankuls \n - Nouveau logo de serv et de bot")
+        var version1_7 = ("- Ajout de la commande */tg* \n - Ajouts de 4 nouveaux wankuls")
         
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
@@ -57,6 +58,7 @@ bot.on('message' , message => {
                 .addField("Ajouts V2.6", `${version1_4}`)
                 .addField("Ajouts V2.7", `${version1_5}`)
                 .addField("Ajouts V2.10", `${version1_6}`)
+                .addField("Ajouts V2.15", `${version1_7}`)
             message.channel.send({embed: version1});
     }
   
@@ -168,8 +170,8 @@ bot.on('message' , message => {
         message.channel.send({embed: xp_embed});
     }}
 
-if (message.content === prefix + "wankul"){
-        number = 29;
+    if (message.content === prefix + "wankul"){
+        number = 33;
         var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         switch (random) {
             case 1: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45252130-44eef000-b352-11e8-98c4-caf5ac41bf63.png']}); break;
@@ -200,8 +202,40 @@ if (message.content === prefix + "wankul"){
             case 26: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257510-98d7f400-b3a7-11e8-89cc-a713c3181a77.png']}); break;
             case 27: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45257511-98d7f400-b3a7-11e8-88fc-1044f45221b2.png']}); break;
             case 28: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45265093-ab553a80-b446-11e8-9408-e037797de2b2.png']}); break;
-            case 29: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45265094-ab553a80-b446-11e8-970a-dd143c2cf9b4.png']}); break;                
+            case 29: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45265094-ab553a80-b446-11e8-970a-dd143c2cf9b4.png']}); break; 
+            case 30: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45596893-c1717680-b9c3-11e8-98e4-51ead1c92fd5.png']}); break; 
+            case 31: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45596894-c20a0d00-b9c3-11e8-927c-a182f0177523.png']}); break; 
+            case 32: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45596895-c2a2a380-b9c3-11e8-8a17-6086c9fcfa93.png']}); break; 
+            case 33: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45596896-c2a2a380-b9c3-11e8-9b4c-0cb1467dbf4e.png']}); break; 
         }
     }
-    
+   if (message.content === prefix + "tg"){
+        number = 23;
+        var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        switch (random) {
+            case 1: message.channel.send("Va faire une sieste dans la bétonneuse"); break;
+            case 2: message.channel.send("Va prendre des vacances à fukushima"); break;
+            case 3: message.channel.send("Inspire profondément ne t'arrête surtout pas"); break;
+            case 4: message.channel.send("Peut-être que tes neurones souffrent d'un décalage horaire"); break;
+            case 5: message.channel.send("Attention la date de péremption de ton cerveau est largement dépassé"); break;
+            case 6: message.channel.send("Va te sécher les cheveux dans le micro-ondes"); break;
+            case 7: message.channel.send("Va cueillir des fleurs dans un champ de mine"); break;
+            case 8: message.channel.send("Enlève le bouton pause de ton cerveau"); break;
+            case 9: message.channel.send("Retourne prendre un bol de gravier"); break;
+            case 10: message.channel.send("Tu n'as pas télécharger la dernière mise à jour de ton cerveau"); break;
+            case 11: message.channel.send("Va te masser les tempes à la ponceuse électrique"); break;
+            case 12: message.channel.send("Va te faire un bain de bouche avec une poire à lavement"); break;
+            case 13: message.channel.send("Je crois que tout cerveau est myope"); break;
+            case 14: message.channel.send("Va te faire une tisane au ciment"); break;
+            case 15: message.channel.send("Va te mettre en mode avion"); break;
+            case 16: message.channel.send("Va te curer les dents à la perceuse"); break;
+            case 17: message.channel.send("Rebranche tes neurones"); break;
+            case 18: message.channel.send("Bande-toi les yeux et court très vite dans la forêt"); break;
+            case 19: message.channel.send("Tes parents ont peut-être confondu le lait et la lessive"); break;
+            case 20: message.channel.send("Allume un cierge et range le dans ta poche"); break;
+            case 21: message.channel.send("Va faire un pic nic sur la voie ferrée"); break;
+            case 22: message.channel.send("Va faire un câlin à l’autoroute"); break;
+            case 23: message.channel.send("Appel le service après-vente de ta perspicacité"); break;
+        }
+    } 
 });
