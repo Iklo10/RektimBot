@@ -1,18 +1,10 @@
 const Discord =  require('discord.js');
 const bot = new Discord.Client();
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
-
-const adapter = new FileSync('database.json');
-const db = low(adapter);
-
-db.defaults({ histoires: [], xp: [] }).write()
 
 var prefix = ("/");
-var prefix2 = ("@");
 
 bot.on('ready', function() {
-    bot.user.setGame ("command: /help ou /help2")
+    bot.user.setGame("command: /help ou /help2")
     console.log("bot_ok");
 });
 
@@ -24,9 +16,7 @@ bot.on('message' , message => {
     var aide_1_1 = ("Pour voir ma version et mes ajouts !") 
     var aide_1_2 = ("Pour obtenir ton ping") 
     var aide_1_3 = ("Pour voir si le bot marche bien et qu\'il est pas tout casser")
-    var aide_1_4 = ("Pour voir les règles du système d'XP")
-    var aide_1_5 = ("Pour voir le tableau d'XP")
-    var aide_1_6 = ("Pour les idées et ajouts futurs du bot !")
+    var futurhelp = ("Pour les idées et ajouts futurs du bot !")
         
         var aide_1 = new Discord.RichEmbed()
             .setTitle("Liste des commandes informatives")
@@ -34,21 +24,20 @@ bot.on('message' , message => {
             .addField("- /version", `${aide_1_1}`)
             .addField("- /ping", `${aide_1_2}`)
             .addField("- /test", `${aide_1_3}`)
-            .addField("- /rxp", `${aide_1_4}`)
-            .addField("- /xp", `${aide_1_5}`)
-            .addField("- /futur", `${aide_1_6}`)
+            .addField("- /futur", `${futurhelp}`)
         message.channel.send({embed: aide_1});
     }      
 
     if (message.content === prefix + "version"){
-        var version1_1 = ("**Version 2.15**") 
+        var version1_1 = ("**Version 2.20**") 
         var version1_2 = ("Le système d'XP est enfin là !! *vas vite fait voir les règles quand même en tapant /rxp* \n Des améliorations arrivent du système bientôt !*pour plus d'information ==> /futur* ")
         var version1_3 = ("- Ajout de la commande /wankul qui permet de faire passer aléatoirement un ceratin nombre de wankul (créés par Mathis et Gaétan) \n - Petit changement esthétique du coté de la commande */help2*")
         var version1_4 = ("- Ajout de 6 wankuls !")
         var version1_5 = ("- Ajout de 6 wankuls !")
         var version1_6 = ("- Ajout de 2 nouveaux wankuls \n - Nouveau logo de serv et de bot")
         var version1_7 = ("- Ajout de la commande */tg* \n - Ajouts de 4 nouveaux wankuls")
-        
+        var version1_8 = ("- Suppression du système d'XP et remise à 0 de l'XP de Mee6 \n - Les valeurs de */ping* ne sont plus négatives")
+
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
                 .setColor(`#DB1C1C`)
@@ -59,6 +48,7 @@ bot.on('message' , message => {
                 .addField("Ajouts V2.7", `${version1_5}`)
                 .addField("Ajouts V2.10", `${version1_6}`)
                 .addField("Ajouts V2.15", `${version1_7}`)
+                .addField("Modification V2.20", `${version1_8}`)
             message.channel.send({embed: version1});
     }
   
@@ -67,25 +57,10 @@ bot.on('message' , message => {
     }
 
     if (message.content === prefix + "ping"){
-        message.reply("PONG !! Latence actuelle: " + `${message.createdTimestamp - Date.now()}` + " ms");
+        message.reply("PONG !! Latence actuelle: " + `${Date.now() - message.createdTimestamp}` + " ms");
     }
     
-    if (message.content === prefix + "rxp"){
-        var rxp1 = ("Il suffit d'écrire un message pour obtenir 1 point") 
-        var rxp2 = ("Tous message considéré comme du spam ou spam sera reconnu comme triche ou anti-jeu et sera puni allant d'un rappel à un mute temporaire, un ban temporaire ou même d'une remise à zéro de son compteur d'XP!")
-        var rxp3 = ("Les conteurs sont remis à zéro à version déployer !")
-        
-            var rxp0 = new Discord.RichEmbed()
-                .setTitle("Règle du système d'XP")
-                .setColor(`#DB1C1C`)
-                .addField("Gagner de l'xp c'est facile ! ", `${rxp1}`)
-                .addField("MAIS ATTENTION ! IL Y A UNE REGLE !", `${rxp2}`)
-                .addField("Petite dernière chose:", `${rxp3}`)
-            message.channel.send({embed: rxp0});
-    }
-     
     if (message.content === prefix + "futur"){
-        var zbv3 = ("Amélioration du système d'xp avec des levels et des rôles ainsi qu'un cooldown pour éviter tout problème de spam ")
         var zbv4 = ("Une commande toute simple qui permet de mentionner entre 5 et 10 fois la personne demandée")
         var zbv5 = ("Ajout d'un système audio *Un rythm maison on va dire* ")
         var futur_fin = ("Pour le futur et le bien être du serveur !")         
@@ -93,9 +68,8 @@ bot.on('message' , message => {
             var futur = new Discord.RichEmbed()
                 .setTitle("Liste des futur ajouts au bot !")
                 .setColor(`#DB1C1C`)
-                .addField("Mise à jour ZulutBot V3.0 :", `${zbv3}`)
-                .addField("Mise à jour ZulutBot V4.0 :", `${zbv4}`)
-                .addField("Mise à jour ZulutBot V5.0 :", `${zbv5}`)
+                .addField("Mise à jour ZulutBot V3.0 :", `${zbv4}`)
+                .addField("Mise à jour ZulutBot V4.0 :", `${zbv5}`)
                 .addField("N'hésitez pas à donner des idées pour le bot !", `${futur_fin}`)
             message.channel.send({embed: futur});
     }
@@ -147,29 +121,6 @@ bot.on('message' , message => {
         message.channel.send("@everyone TATAAAAAAAA YOYOOOOO");
     }
 
-    var perso = message.author.username;
-
-    if(message.author.bot)return;
-
-    if(!db.get("xp").find({user: perso}).value()){
-        db.get("xp").push({user: perso,xp: 1}).write();
-        
-    }else{
-        var userxpdb = db.get("xp").filter({user: perso}).find('xp').value();
-        console.log(userxpdb)
-        var userxp = Object.values(userxpdb)
-        db.get("xp").find({user: perso}).assign({user: perso, xp: userxp[1] +=1}).write();
-
-    if (message.content === prefix + "xp"){
-        var xp = db.get("xp").filter({user: perso}).find('xp').value()
-        var xpfinal = Object.values(xp);
-        var xp_embed = new Discord.RichEmbed()
-            .setTitle(`Stat des XP de ${message.author.username}`)
-            .setColor(`#F4D03F`)
-            .addField("XP total:", `${xpfinal[1]} points`)
-        message.channel.send({embed: xp_embed});
-    }}
-
     if (message.content === prefix + "wankul"){
         number = 33;
         var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
@@ -209,7 +160,8 @@ bot.on('message' , message => {
             case 33: message.channel.send({files:['https://user-images.githubusercontent.com/40717116/45596896-c2a2a380-b9c3-11e8-9b4c-0cb1467dbf4e.png']}); break; 
         }
     }
-   if (message.content === prefix + "tg"){
+
+    if (message.content === prefix + "tg"){
         number = 23;
         var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         switch (random) {
@@ -237,5 +189,5 @@ bot.on('message' , message => {
             case 22: message.channel.send("Va faire un câlin à l’autoroute"); break;
             case 23: message.channel.send("Appel le service après-vente de ta perspicacité"); break;
         }
-    } 
+    }
 });
