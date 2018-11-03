@@ -29,26 +29,17 @@ bot.on('message' , message => {
     }      
 
     if (message.content === prefix + "version"){
-        var version1_1 = ("**Version 2.20**") 
-        var version1_2 = ("Le système d'XP est enfin là !! *vas vite fait voir les règles quand même en tapant /rxp* \n Des améliorations arrivent du système bientôt !*pour plus d'information ==> /futur* ")
-        var version1_3 = ("- Ajout de la commande /wankul qui permet de faire passer aléatoirement un ceratin nombre de wankul (créés par Mathis et Gaétan) \n - Petit changement esthétique du coté de la commande */help2*")
-        var version1_4 = ("- Ajout de 6 wankuls !")
-        var version1_5 = ("- Ajout de 6 wankuls !")
-        var version1_6 = ("- Ajout de 2 nouveaux wankuls \n - Nouveau logo de serv et de bot")
-        var version1_7 = ("- Ajout de la commande */tg* \n - Ajouts de 4 nouveaux wankuls")
-        var version1_8 = ("- Suppression du système d'XP et remise à 0 de l'XP de Mee6 \n - Les valeurs de */ping* ne sont plus négatives")
-
+        var version1_1 = ("**Version 3.1**") 
+        var version1_2 = ("- Suppression du système d'XP et remise à 0 de l'XP de Mee6 \n - Les valeurs de */ping* ne sont plus négatives")
+        var version1_3 = ("- Commande */manon* est arrivé")
+            
+        
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
                 .setColor(`#DB1C1C`)
                 .addField("Version ZululBot", `${version1_1}`)
-                .addField("Ajouts V2.0", `${version1_2}`)
-                .addField("Ajouts V2.5", `${version1_3}`)
-                .addField("Ajouts V2.6", `${version1_4}`)
-                .addField("Ajouts V2.7", `${version1_5}`)
-                .addField("Ajouts V2.10", `${version1_6}`)
-                .addField("Ajouts V2.15", `${version1_7}`)
-                .addField("Modification V2.20", `${version1_8}`)
+                .addField("Ajouts V3.0", `${version1_2}`)
+                .addField("Ajouts V3.1", `${version1_3}`)
             message.channel.send({embed: version1});
     }
   
@@ -119,6 +110,10 @@ bot.on('message' , message => {
     if (message.content === prefix + "tatayoyo"){
         for (var boucle = 0; boucle < 10; boucle++)
         message.channel.send("@everyone TATAAAAAAAA YOYOOOOO");
+    }
+    
+    if (message.content === prefix + "manon"){
+        message.channel.send("");
     }
 
     if (message.content === prefix + "wankul"){
