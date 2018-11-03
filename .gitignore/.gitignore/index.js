@@ -113,7 +113,7 @@ bot.on('message' , message => {
     }
     
     if (message.content === prefix + "manon"){
-        message.channel.send("If Manon says yes... https://drive.google.com/open?id=11GBQm14WESi__WEa_ReaMXEDI3GKbyg0");
+        message.channel.send("If Manon says yes... https://user-images.githubusercontent.com/40717116/47956813-eee1a600-dfaa-11e8-87bd-767920df8ea7.gif");
     }
 
     if (message.content === prefix + "wankul"){
