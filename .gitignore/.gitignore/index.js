@@ -29,7 +29,7 @@ bot.on('message' , msg => {
     }      
 
     if (msg.content === prefix + "version"){
-        var version1_1 = ("**Version 3.10.1**") 
+        var version1_1 = ("**Version 3.10.2**") 
         var version1_2 = ("- Suppression du système d'XP et remise à 0 de l'XP de Mee6 \n - Les valeurs de */ping* ne sont plus négatives")
         var version1_3 = ("- Commande */manon* est arrivé")
         var version1_4 = ("- Commande */manon* est remplacer par la commande */gif* qui affiche au hasard dans une banque de 3 gif maison pour l'instant *(A vous d'en proposer d'autre **A CREER** )* \n - Les commandes */futur*, *help2* et */help* ont été mise à jour \n - Ajout de note de musique a la commande */tatayoyo* \n - Le bot est un peu plus rapide")
@@ -73,14 +73,15 @@ bot.on('message' , msg => {
         var cmd_basic = ("Test la ! Et tu verra !") 
         var tata_yoyo = ("Spam 10 fois **TATAAAAAAAA YOYOOOOO :microphone: :musical_score: :microphone: :musical_score:** et mentionne tous le monde")
         var rdm = ("Tire au hasard une image ou une phrase dans une banque de donnée maison")
-
+        var help2_fin = ("**Enjoy**")
+        
         var help2_1 = new Discord.RichEmbed()
                 .setTitle("Liste des commande secondaire !")
                 .setColor(`#DB1C1C`)
                 .addField("- /saucisse \n- /69 \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir", `${cmd_basic}`)
                 .addField("- /tatayoyo:", `${tata_yoyo}`)
                 .addField("- /wankul \n- /tg \n- /gif", `${rdm}`)
-                .addField("**D'autres petites commandes débiles arriveront surement bientôt !**")
+                .addField("**D'autres petites commandes débiles arriveront surement bientôt !**", `${help2_fin}`)
                 msg.channel.send({embed: help2_1});
     }
 
