@@ -29,11 +29,11 @@ bot.on('message' , msg => {
     }      
 
     if (msg.content === prefix + "version"){
-        var version1_1 = ("**Version 3.10.2**") 
+        var version1_1 = ("**Version 3.11**") 
         var version1_2 = ("- Suppression du système d'XP et remise à 0 de l'XP de Mee6 \n - Les valeurs de */ping* ne sont plus négatives")
         var version1_3 = ("- Commande */manon* est arrivé")
         var version1_4 = ("- Commande */manon* est remplacer par la commande */gif* qui affiche au hasard dans une banque de 3 gif maison pour l'instant *(A vous d'en proposer d'autre **A CREER** )* \n - Les commandes */futur*, *help2* et */help* ont été mise à jour \n - Ajout de note de musique a la commande */tatayoyo* \n - Le bot est un peu plus rapide")
-
+        var version1_5 = ("- La commande */manon* est de retour !")
 
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
@@ -42,6 +42,7 @@ bot.on('message' , msg => {
                 .addField("Ajouts V3.0", `${version1_2}`)
                 .addField("Ajouts V3.1", `${version1_3}`)
                 .addField("Ajouts V3.10", `${version1_4}`)
+                .addField("Ajouts V3.11", `${version1_5}`)
             msg.channel.send({embed: version1});
     }
   
@@ -74,11 +75,11 @@ bot.on('message' , msg => {
         var tata_yoyo = ("Spam 10 fois **TATAAAAAAAA YOYOOOOO :microphone: :musical_score: :microphone: :musical_score:** et mentionne tous le monde")
         var rdm = ("Tire au hasard une image ou une phrase dans une banque de donnée maison")
         var help2_fin = ("**Enjoy**")
-        
+
         var help2_1 = new Discord.RichEmbed()
                 .setTitle("Liste des commande secondaire !")
                 .setColor(`#DB1C1C`)
-                .addField("- /saucisse \n- /69 \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir", `${cmd_basic}`)
+                .addField("- /saucisse \n- /69 \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir \n- /manon", `${cmd_basic}`)
                 .addField("- /tatayoyo:", `${tata_yoyo}`)
                 .addField("- /wankul \n- /tg \n- /gif", `${rdm}`)
                 .addField("**D'autres petites commandes débiles arriveront surement bientôt !**", `${help2_fin}`)
@@ -117,6 +118,10 @@ bot.on('message' , msg => {
         msg.channel.send("GILLETTE !!!! THE BEST MAN CAN GET!!! :microphone: :musical_score: :microphone: :musical_score: https://www.youtube.com/watch?v=9fWxCIi5PIw");
     }
 
+    if (msg.content === prefix + "manon"){
+        msg.channel.send("LOUIS PREND SON BUS **COMME TOUS LES MATINS** \nIL CROISE CETTE MÊME FILLE, AVEC SON DOUX PARFUM \nQU'ELLE VIENNE LUI PARLER, **IL L'ESPERE TOUS LES JOURS** \nCE QU'IL RESSENT AU FOND D'LUI, **C'EST CE QU ON APPELLE L'AMOUR** \n**MAIS LOUIS, IL EST TIMIDE** ET ELLE, ELLE EST SI BELLE \nIL NE VEUX PAS Y ALLER, IL EST COLLE AU FOND D'SON SIEGE");
+    }
+    
     if (msg.content === prefix + "tatayoyo"){
         for (var boucle = 0; boucle < 10; boucle++)
         msg.channel.send("@everyone TATAAAAAAAA YOYOOOOO :microphone: :musical_score: :microphone: :musical_score: ");
