@@ -29,16 +29,18 @@ bot.on('message' , msg => {
     }      
 
     if (msg.content === prefix + "version"){
-        var version1_1 = ("**Version 3.20**") 
+        var version1_1 = ("**Version 3.21**") 
         var version1_2 = ("- Suppression du système d'XP et remise à 0 de l'XP de Mee6 \n - Les valeurs de */ping* ne sont plus négatives")
         var version1_3 = ("++ certaines commande")
+        var version1_4 = ("- la commande */tatayoyo* spam plus que 5 fois au lieu de 10 \n - Ajouts de la commande /zulul")
 
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
                 .setColor(`#DB1C1C`)
                 .addField("Version ZululBot", `${version1_1}`)
-                .addField("Ajouts V3.0", `${version1_2}`)
-                .addField("Ajouts V3.20", `${version1_3}`)
+                .addField("V3.0", `${version1_2}`)
+                .addField("V3.20", `${version1_3}`)
+                .addField("V3.21", `${version1_4}`)
             msg.channel.send({embed: version1});
     }
   
@@ -68,18 +70,22 @@ bot.on('message' , msg => {
 
     if (msg.content === prefix + "help2"){
         var cmd_basic = ("Test la ! Et tu verra !") 
-        var tata_yoyo = ("Spam 10 fois **TATAAAAAAAA YOYOOOOO :microphone: :musical_score: :microphone: :musical_score:** et mentionne tous le monde")
-        var rdm = ("Tire au hasard une image ou une phrase dans une banque de donnée maison")
+        var tata_yoyo = ("Spam 5 fois **TATAAAAAAAA YOYOOOOO :microphone: :musical_score: :microphone: :musical_score:** et mentionne tous le monde")
+        var rdm = ("Tire au hasard une image ou un phrase dans une banque de donnée maison")
         var help2_fin = ("**Enjoy**")
 
         var help2_1 = new Discord.RichEmbed()
                 .setTitle("Liste des commande secondaire !")
                 .setColor(`#DB1C1C`)
-                .addField("- /saucisse \n- /69 \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir", `${cmd_basic}`)
+                .addField("- /zulul \n- /saucisse \n- /69 \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir", `${cmd_basic}`)
                 .addField("- /tatayoyo:", `${tata_yoyo}`)
                 .addField("- /wankul \n- /tg \n- /gif", `${rdm}`)
                 .addField("**D'autres petites commandes débiles arriveront surement bientôt !**", `${help2_fin}`)
                 msg.channel.send({embed: help2_1});
+    }
+
+    if (msg.content === prefix + "zulul"){
+        msg.channel.send("GNE GNE GNE");
     }
 
     if (msg.content === prefix + "saucisse"){
@@ -115,7 +121,7 @@ bot.on('message' , msg => {
     }
     
     if (msg.content === prefix + "tatayoyo"){
-        for (var boucle = 0; boucle < 10; boucle++)
+        for (var boucle = 0; boucle < 5; boucle++)
         msg.channel.send("@everyone TATAAAAAAAA YOYOOOOO :microphone: :musical_score: :microphone: :musical_score: ");
     }
 
