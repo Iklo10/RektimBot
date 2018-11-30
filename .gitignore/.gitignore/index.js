@@ -29,10 +29,11 @@ bot.on('message' , msg => {
     }      
 
     if (msg.content === prefix + "version"){
-        var version1_1 = ("**Version 3.21**") 
+        var version1_1 = ("**Version 3.21.1**") 
         var version1_2 = ("- Suppression du système d'XP et remise à 0 de l'XP de Mee6 \n - Les valeurs de */ping* ne sont plus négatives")
         var version1_3 = ("++ certaines commande")
         var version1_4 = ("- la commande */tatayoyo* spam plus que 5 fois au lieu de 10 \n - Ajouts de la commande /zulul")
+        var version1_5 = ("- commande /gif réparée")
 
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
@@ -41,6 +42,7 @@ bot.on('message' , msg => {
                 .addField("V3.0", `${version1_2}`)
                 .addField("V3.20", `${version1_3}`)
                 .addField("V3.21", `${version1_4}`)
+                .addField("V3.21.1", `${version1_5}`)
             msg.channel.send({embed: version1});
     }
   
@@ -126,7 +128,7 @@ bot.on('message' , msg => {
     }
 
     if (msg.content === prefix + "gif"){
-        number = 3;
+        number = 2;
         var random1 = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         switch (random1) {
             case 1:msg.channel.send("Moi devant les vidéos Tik Tok", {files:['https://user-images.githubusercontent.com/40717116/47963314-ca2d1300-e02a-11e8-8f71-7912ceb9f60b.gif']}); break;
