@@ -13,36 +13,28 @@ bot.login(process.env.TOKEN);
 bot.on('message' , msg => {
     
     if (msg.content === prefix + "help"){
-    var aide_1_1 = ("Pour voir ma version et mes ajouts !") 
-    var aide_1_2 = ("Pour obtenir ton ping")
-    var aide_1_3 = ("Pour voir la seconde partie des commandes")
-    var futurhelp = ("Pour les idées et ajouts futurs du bot !")
+    var aide1_1 = ("Pour voir ma version et mes ajouts !") 
+    var aide1_2 = ("Pour voir ton ping")
+    var aide1_3 = ("Pour voir la seconde partie des commandes")
         
         var aide_1 = new Discord.RichEmbed()
             .setTitle("Liste des commandes informatives")
             .setColor(`#DB1C1C`)
-            .addField("- /version", `${aide_1_1}`)
-            .addField("- /ping", `${aide_1_2}`)
-            .addField("- /futur", `${futurhelp}`)
-            .addField("- /help2 ", `${aide_1_3}`)
+            .addField("**- /version**", `${aide1_1}`)
+            .addField("**- /ping**", `${aide1_2}`)
+            .addField("**- /help2**", `${aide1_3}`)
         msg.channel.send({embed: aide_1});
     }      
 
     if (msg.content === prefix + "version"){
-        var version1_1 = ("**Version 3.21.1**") 
-        var version1_2 = ("- Suppression du système d'XP et remise à 0 de l'XP de Mee6 \n - Les valeurs de */ping* ne sont plus négatives")
-        var version1_3 = ("++ certaines commande")
-        var version1_4 = ("- la commande */tatayoyo* spam plus que 5 fois au lieu de 10 \n - Ajouts de la commande /zulul")
-        var version1_5 = ("- commande /gif réparée")
+        var version1_1 = ("**Version 4.0**") 
+        var version1_2 = (" - Changement de nom \n - Correction de quelques fautes \n Bye bye /futur, /gif \n Ajout de la commande /st")
 
             var version1 = new Discord.RichEmbed()
                 .setTitle("NotePatch")
                 .setColor(`#DB1C1C`)
                 .addField("Version ZululBot", `${version1_1}`)
-                .addField("V3.0", `${version1_2}`)
-                .addField("V3.20", `${version1_3}`)
-                .addField("V3.21", `${version1_4}`)
-                .addField("V3.21.1", `${version1_5}`)
+                .addField("V4.0", `${version1_2}`)
             msg.channel.send({embed: version1});
     }
   
@@ -53,36 +45,20 @@ bot.on('message' , msg => {
     if (msg.content === prefix + "ping"){
         msg.reply("PONG !! Latence actuelle: " + `${Date.now() - msg.createdTimestamp}` + " ms");
     }
-    
-    if (msg.content === prefix + "futur"){
-        var zbf1 = ("Une commande qui permet de mentionner entre 5 et 10 fois la personne demandée *(elle arrivera un jour ! C'est promis !)* et un système de sondage")
-        var zbf2 = ("Ajout d'un système audio *Un rythm maison on va dire* ")
-        var zbf3 = ("Le retour d'un système d'XP maison aboutie à 100% avec des roles et des permissions")
-        var futur_fin = ("Pour le futur et le bien être du serveur !")         
-            
-            var futur = new Discord.RichEmbed()
-                .setTitle("Liste des futurs ajouts au bot !")
-                .setColor(`#DB1C1C`)
-                .addField("Mise à jour ZulutBot prioritaire :", `${zbf1}`)
-                .addField("Mise à jour ZulutBot secondaire :", `${zbf2}`)
-                .addField("Mise à jour ZulutBot tertiaire :", `${zbf3}`)
-                .addField("N'hésitez pas à donner des idées pour le bot !", `${futur_fin}`)
-                msg.channel.send({embed: futur});
-    }
 
     if (msg.content === prefix + "help2"){
         var cmd_basic = ("Test la ! Et tu verra !") 
-        var tata_yoyo = ("Spam 5 fois **TATAAAAAAAA YOYOOOOO :microphone: :musical_score: :microphone: :musical_score:** et mentionne tous le monde")
-        var rdm = ("Tire au hasard une image ou un phrase dans une banque de donnée maison")
+        var tata_yoyo = ("Spam 5 fois la commande liée et mentionne tous le monde")
+        var rdm = ("Tire au hasard une image ou une phrase dans une banque de données maison")
         var help2_fin = ("**Enjoy**")
 
         var help2_1 = new Discord.RichEmbed()
                 .setTitle("Liste des commande secondaire !")
                 .setColor(`#DB1C1C`)
-                .addField("- /zulul \n- /saucisse \n- /69 \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir", `${cmd_basic}`)
-                .addField("- /tatayoyo:", `${tata_yoyo}`)
-                .addField("- /wankul \n- /tg \n- /gif", `${rdm}`)
-                .addField("**D'autres petites commandes débiles arriveront surement bientôt !**", `${help2_fin}`)
+                .addField("**- /zulul \n- /saucisse \n- /69 \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir**", `${cmd_basic}`)
+                .addField("**- /tatayoyo \n - /st", `${tata_yoyo}`)
+                .addField("**- /wankul \n- /tg \n- /gif**", `${rdm}`)
+                .addField("**D'autres petites commandes débiles arriveront sûrement bientôt !**", `${help2_fin}`)
                 msg.channel.send({embed: help2_1});
     }
 
@@ -115,7 +91,7 @@ bot.on('message' , msg => {
     }
         
     if (msg.content === prefix + "zorana"){
-        msg.channel.send("BONJOUR! Je suis le pésident à ZORANA! \nSi je suis là, c\'est parce qu'est en SPÉCIAL! ELLE A DES BUBULLES !! ");
+        msg.channel.send("BONJOUR! Je suis le pésident à ZORANA! \nSi je suis là, c'est pour vous présenter mon eau. Parce que mon eau elle est SPÉCIAL! ELLE A DES BUBULLES !! https://mediagamaniak.cdn.re/vidcap/palmashow-parodie-pub.mp4.jpg");
     }
 
     if (msg.content === prefix + "rasoir"){
@@ -127,13 +103,9 @@ bot.on('message' , msg => {
         msg.channel.send("@everyone TATAAAAAAAA YOYOOOOO :microphone: :musical_score: :microphone: :musical_score: ");
     }
 
-    if (msg.content === prefix + "gif"){
-        number = 2;
-        var random1 = Math.floor (Math.random() * (number - 1 + 1)) + 1;
-        switch (random1) {
-            case 1:msg.channel.send("Moi devant les vidéos Tik Tok", {files:['https://user-images.githubusercontent.com/40717116/47963314-ca2d1300-e02a-11e8-8f71-7912ceb9f60b.gif']}); break;
-            case 2:msg.channel.send("DEBOUT LA DEDANS !!", {files:['https://user-images.githubusercontent.com/40717116/47963313-ca2d1300-e02a-11e8-941c-dbd3299cfa50.gif']}); break;
-        }
+    if (msg.content === prefix + "st"){
+        for (var boucle = 0; boucle < 5; boucle++)
+        msg.channel.send("@everyone AH, HA, HA, HA, STAYIN' ALIVE,\n STAYING ALIVE AH, HA, HA, HA, STAYIN' ALIVE !! :microphone: :musical_score: :microphone: :musical_score: ");
     }
 
     if (msg.content === prefix + "wankul"){
@@ -206,3 +178,4 @@ bot.on('message' , msg => {
         }
     }
 });
+/*case : msg.channel.send({files:['']}); break;*/
