@@ -27,14 +27,14 @@ bot.on('message' , msg => {
     }      
 
     if (msg.content === prefix + "version"){
-        var version1_1 = ("**Version 4.0**") 
-        var version1_2 = (" - Changement de nom \n - Correction de quelques fautes \n Bye bye /futur, /gif \n Ajout de la commande /st")
+        var version1_1 = ("**Version 1.0**") 
+        var version1_2 = (" - Changement de nom , remise à 0 des compteurs des versions \n - Refonte des couleurs de Bot \n - Nouvelle image de Bot \n - Ajouts du lien pour le site")
 
             var version1 = new Discord.RichEmbed()
-                .setTitle("NotePatch")
-                .setColor(`#DB1C1C`)
-                .addField("Version ZululBot", `${version1_1}`)
-                .addField("V4.0", `${version1_2}`)
+                .setTitle("Changelog")
+                .setColor(`#87CEEB`)
+                .addField("Version RektimBot", `${version1_1}`)
+                .addField("V1.0", `${version1_2}`)
             msg.channel.send({embed: version1});
     }
   
@@ -56,7 +56,7 @@ bot.on('message' , msg => {
                 .setTitle("Liste des commande secondaire !")
                 .setColor(`#DB1C1C`)
                 .addField("**- /zulul \n- /saucisse \n- /69 \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir**", `${cmd_basic}`)
-                .addField("**- /tatayoyo \n - /st", `${tata_yoyo}`)
+                .addField("**- /tatayoyo \n - /st**", `${tata_yoyo}`)
                 .addField("**- /wankul \n- /tg \n- /gif**", `${rdm}`)
                 .addField("**D'autres petites commandes débiles arriveront sûrement bientôt !**", `${help2_fin}`)
                 msg.channel.send({embed: help2_1});
@@ -178,4 +178,3 @@ bot.on('message' , msg => {
         }
     }
 });
-/*case : msg.channel.send({files:['']}); break;*/
