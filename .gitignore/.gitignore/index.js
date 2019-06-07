@@ -15,21 +15,23 @@ bot.on('message' , msg => {
     if (msg.content === prefix + "help"){
     var aide1_1 = ("Pour voir ma version et mes ajouts !") 
     var aide1_2 = ("Pour voir ton ping")
-    var aide1_3 = ("Pour voir la seconde partie des commandes")
+    var aide1_3 = ("Pour avoir le lien du site Rektim")
+    var aide1_4 = ("Pour voir la seconde partie des commandes")
         
         var aide_1 = new Discord.RichEmbed()
             .setTitle("Liste des commandes informatives")
             .setColor(`#DB1C1C`)
             .addField("**- /version**", `${aide1_1}`)
             .addField("**- /ping**", `${aide1_2}`)
-            .addField("**- /help2**", `${aide1_3}`)
+            .addField("**- /site**", `${aide1_3}`)
+            .addField("**- /help2**", `${aide1_4}`)
         msg.channel.send({embed: aide_1});
     }      
 
     if (msg.content === prefix + "version"){
         var version1_1 = ("**Version 1.1**") 
         var version1_2 = (" - Changement de nom , remise à 0 des compteurs des versions \n - Refonte des couleurs de Bot \n - Nouvelle image de Bot \n - Ajouts du lien pour le site")
-        var version1_3 = (" Ajout du lien pour le site Rektim")
+        var version1_3 = (" Ajout du lien pour le site Rektim. *Info avec **/help** ou **/site** *")
         
             var version1 = new Discord.RichEmbed()
                 .setTitle("Changelog")
@@ -42,6 +44,10 @@ bot.on('message' , msg => {
   
     if (msg.content === prefix + "test"){
         msg.channel.send("Test chat validé");
+    }
+    
+    if (msg.content === prefix + "rektim"){
+        msg.channel.send("Le site Rektim est enfin là !!! \n Après plusieurs mois d'annonce le voici enfin !! \n *ATTENTION: le site étant hébergé sur mon ordinateur, le site ne fonctionnera pas 24h/24! *");
     }
 
     if (msg.content === prefix + "ping"){
