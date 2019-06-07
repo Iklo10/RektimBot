@@ -27,14 +27,16 @@ bot.on('message' , msg => {
     }      
 
     if (msg.content === prefix + "version"){
-        var version1_1 = ("**Version 1.0**") 
+        var version1_1 = ("**Version 1.1**") 
         var version1_2 = (" - Changement de nom , remise à 0 des compteurs des versions \n - Refonte des couleurs de Bot \n - Nouvelle image de Bot \n - Ajouts du lien pour le site")
-
+        var version1_3 = (" Ajout du lien pour le site Rektim")
+        
             var version1 = new Discord.RichEmbed()
                 .setTitle("Changelog")
                 .setColor(`#87CEEB`)
                 .addField("Version RektimBot", `${version1_1}`)
                 .addField("V1.0", `${version1_2}`)
+                .addField("V1.1", `${version1_3}`)
             msg.channel.send({embed: version1});
     }
   
