@@ -29,13 +29,15 @@ bot.on('message' , msg => {
     if (msg.content === prefix + "version"){
         var version1_1 = ("**Version 1.1**") 
         var version1_2 = (" - Changement de nom , remise à 0 des compteurs des versions \n - Refonte des couleurs de Bot \n - Nouvelle image de Bot \n - Ajouts du lien pour le site")
-
+        var version1_3 = ("  - Ajout de la commande /fortnite \n - Ajout du changelog des versions avec la commande /version \n - Suppression des liens restés apparents")
+        var changelog = ("** https://github.com/Iklo10/ZululBot/wiki **")
         
             var version1 = new Discord.RichEmbed()
-                .setTitle("Changelog")
                 .setColor(`#87CEEB`)
                 .addField("Version RektimBot", `${version1_1}`)
                 .addField("V1.0", `${version1_2}`)
+                .addField("V1.1", `${version1_3}`)
+                .addField("Pour le changelog total, c'est ici :", `${changelog}`)
             msg.channel.send({embed: version1});
     }
   
@@ -43,6 +45,9 @@ bot.on('message' , msg => {
         msg.channel.send("Test chat validé");
     }
     
+    if (msg.content === prefix + "site"){
+        msg.channel.send("Le site Rektim est enfin là !!! \n Après plusieurs mois d'annonce le voici enfin !! \n *ATTENTION: le site étant hébergé sur mon ordinateur, le site ne fonctionnera pas 24h/24! *");
+    }
 
     if (msg.content === prefix + "ping"){
         msg.reply("PONG !! Latence actuelle: " + `${Date.now() - msg.createdTimestamp}` + " ms");
@@ -57,7 +62,7 @@ bot.on('message' , msg => {
         var help2_1 = new Discord.RichEmbed()
                 .setTitle("Liste des commande secondaire !")
                 .setColor(`#DB1C1C`)
-                .addField("**- /zulul \n- /saucisse \n- /69 \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir**", `${cmd_basic}`)
+                .addField("**- /fortnite \n - /zulul \n- /saucisse \n- /gaetan \n- /love \n- /repd \n- /bafouille \n- /zorana \n- /rasoir**", `${cmd_basic}`)
                 .addField("**- /tatayoyo \n - /st**", `${tata_yoyo}`)
                 .addField("**- /wankul \n- /tg \n- /gif**", `${rdm}`)
                 .addField("**D'autres petites commandes débiles arriveront sûrement bientôt !**", `${help2_fin}`)
@@ -68,20 +73,20 @@ bot.on('message' , msg => {
         msg.channel.send("GNE GNE GNE");
     }
 
+    if (msg.content === prefix + "fortnite"){
+        msg.channel.send({files:['https://user-images.githubusercontent.com/40717116/59713388-a8764a00-920f-11e9-9371-443cf800f003.gif']});
+    }
+
     if (msg.content === prefix + "saucisse"){
         msg.channel.send("OPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !! \nOPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !! \nOPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !! \nOPÉRATION SAUCISSE, OPÉRATION CUISSON-SSON !!");
     }
 
-    if (msg.content === prefix + "69"){
-        msg.channel.send("OPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\nOPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\nOPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\nOPÉRATION PÉNIS, OPÉRATION FÉLATION-TION !!\n" );
-    }
-
     if (msg.content === prefix + "gaetan"){
-        msg.channel.send("Gaétan dans environ 5-6 ans ==> https://www.youtube.com/watch?v=KZb3GUOWX8I");
+        msg.channel.send("Gaétan dans environ 5-6 ans ==>", {files:['https://www.youtube.com/watch?v=KZb3GUOWX8I']});
     }
 
     if (msg.content === prefix + "love"){
-        msg.channel.send("WHAT IS LOVE !? Tel est la question ! https://www.youtube.com/watch?v=dAIpjgvhKsA ");
+        msg.channel.send("WHAT IS LOVE !? Tel est la question ! ", {files:['https://www.youtube.com/watch?v=dAIpjgvhKsA']});
     }
     
     if (msg.content === prefix + "repd"){
@@ -93,11 +98,11 @@ bot.on('message' , msg => {
     }
         
     if (msg.content === prefix + "zorana"){
-        msg.channel.send("BONJOUR! Je suis le pésident à ZORANA! \nSi je suis là, c'est pour vous présenter mon eau. Parce que mon eau elle est SPÉCIAL! ELLE A DES BUBULLES !! https://mediagamaniak.cdn.re/vidcap/palmashow-parodie-pub.mp4.jpg");
+        msg.channel.send("BONJOUR! Je suis le pésident à ZORANA! \nSi je suis là, c'est pour vous présenter mon eau. Parce que mon eau elle est SPÉCIAL! ELLE A DES BUBULLES !!", {files:['https://mediagamaniak.cdn.re/vidcap/palmashow-parodie-pub.mp4.jpg']});
     }
 
     if (msg.content === prefix + "rasoir"){
-        msg.channel.send("GILLETTE !!!! THE BEST MAN CAN GET!!! :microphone: :musical_score: :microphone: :musical_score: https://www.youtube.com/watch?v=9fWxCIi5PIw");
+        msg.channel.send("GILLETTE !!!! THE BEST MAN CAN GET!!! :microphone: :musical_score: :microphone: :musical_score:" , {files:['https://www.youtube.com/watch?v=9fWxCIi5PIw']});
     }
     
     if (msg.content === prefix + "tatayoyo"){
