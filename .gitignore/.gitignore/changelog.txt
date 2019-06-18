@@ -1,0 +1,8 @@
+Version 1.0
+ - Changement de nom , remise à 0 des compteurs des versions
+ - Refonte des couleurs de Bot 
+ - Nouvelle image de Bot 
+ - Ajouts du lien pour le site
+
+Version 1.1
+ - Ajout de la commande /fortnite et du changelog des versions avec la commande /version
