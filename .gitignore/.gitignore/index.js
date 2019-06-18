@@ -44,10 +44,6 @@ bot.on('message' , msg => {
     if (msg.content === prefix + "test"){
         msg.channel.send("Test chat validé");
     }
-    
-    if (msg.content === prefix + "site"){
-        msg.channel.send("Le site Rektim est enfin là !!! \n Après plusieurs mois d'annonce le voici enfin !! \n *ATTENTION: le site étant hébergé sur mon ordinateur, le site ne fonctionnera pas 24h/24! *");
-    }
 
     if (msg.content === prefix + "ping"){
         msg.reply("PONG !! Latence actuelle: " + `${Date.now() - msg.createdTimestamp}` + " ms");
