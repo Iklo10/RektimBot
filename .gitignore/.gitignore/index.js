@@ -26,4 +26,4 @@ client.on('ready', () => {
     console.log("Lancé");
 });
 
-bot.login(process.env.TOKEN);
+client.login(process.env.TOKEN);
