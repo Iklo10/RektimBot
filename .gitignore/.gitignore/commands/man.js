@@ -3,5 +3,5 @@ exports.run = (client, msg, args) => {
     
     if (!args[0]) return msg.channel.send("Pour utiliser la commande: /man + le nom de superhéros que tu veux te donner");
 
-    msg.reply("tu est vraiment " + `${args.join('')}` + "man !!"); 
+    msg.reply("tu es vraiment " + `${args.join('')}` + "man !!"); 
 }
